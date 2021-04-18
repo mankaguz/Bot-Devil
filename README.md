@@ -58,7 +58,6 @@ Siapin alat dan bahannya.
 > pkg install mc -y
 > git clone https://github.com/mankaguz/Bot-Devil
 > cd Bot-Devil
-> bash install.sh
 > node Bot-Devil
 > Scan Done...
 ```
