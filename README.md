@@ -1,5 +1,4 @@
-{
-	# Bot-Devil
+## Bot-Devil
 Riport = Cepu , Cepu ya Cupu, Thanks Cupu:)
 ## <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px"> I'm AGUZ
 <p align="center">
@@ -81,4 +80,3 @@ Ket: Script ini gratis ye Jangan dijual_-
 
 * [`ALLAH SWT`]
 <img src="https://github.com/sassman/t-rec-rs/blob/main/docs/demo.gif" alt="Terminal Linux" width="1000" />
-}
