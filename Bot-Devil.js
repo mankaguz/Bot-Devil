@@ -1,3 +1,10 @@
+/*=====> Assallamualaikum <=====
+MAU COLONG?? BOLEH......
+MAU RECODE?? JUGA BOLEH...
+ASLKAN KASIH NAMA GW Aguz
+HARGAI COK
+=======> GA KASIH NAMA GW, LU ITU CUPU<=====
+*/
 const
   {
     WAConnection,
@@ -1566,7 +1573,13 @@ break
 			hexa.sendMessage(from, `${teks}*Speed: ${latensi7.toFixed(4)} S*`, text,anu)
 			})
 			break
-	                 
+ /*=====> Assallamualaikum <=====
+MAU COLONG?? BOLEH......
+MAU RECODE?? JUGA BOLEH...
+ASLKAN KASIH NAMA GW Aguz
+HARGAI COK
+=======> GA KASIH NAMA GW, LU ITU CUPU<=====
+*/
 		case `${prefix}help`:
         case `${prefix}menu`:
        uptime = process.uptime()
