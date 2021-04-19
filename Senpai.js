@@ -61,16 +61,16 @@ const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))
 //const antilink = JSON.parse(fs.readFileSync('./database/kelompok/antilink.json'))
 const vcard1 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:KING AGUZ\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
-              + 'TEL;type=CELL;type=VOICE;waid=6288806888170:+62 88806888170\n'  //ganti nomor lu! 
+              + 'FN:Senpai\n' //ganti nama lu! 
+              + 'ORG: Owner Deva;\n' 
+              + 'TEL;type=CELL;type=VOICE;waid=6287860330822:+62 87860330822\n'  //ganti nomor lu! 
               + 'END:VCARD'
              
 const vcard2 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:Whatsapp Aguz\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
-              + 'TEL;type=CELL;type=VOICE;waid=0:+0\n'  //ganti nomor lu! 
+              + 'FN:Whatsapp Senpai\n' //ganti nama lu! 
+              + 'ORG: Owner Deva;\n' 
+              + 'TEL;type=6287860330822;type=VOICE;waid=0:+0\n'  //ganti nomor lu! 
               + 'END:VCARD'
              ////apikey
 const VhtearKey = kontol.VhtearKey
@@ -100,7 +100,7 @@ publik = false
 waktuafk = '-'
 alasanafk = 'Tidur'
 numbernye = '0'
-setgrup = '6283136505591-1614953337@g.us'
+setgrup = '6287860330822-1614953337@g.us'
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
 const addafk = (from) => {
     const obj = { id: from, expired: Date.now() + toMs('0m') }
@@ -620,7 +620,7 @@ hexa.on('message-new', async (mek) => {
         wait: 'otw',
         success: '️Sukses(:',
         error: {
-          stick: 'Yah gagal, coba ulangi ^_^',
+          stick: 'Yah gagal, coba ulangi Lagi',
           Iv: 'Link yang ada kirim tidak valid!!🙂'
         },
 
@@ -919,15 +919,15 @@ function createExif(pack, auth) {
                 const kontol = fs.readFileSync('./lib/kontol.mp3');
                 hexa.sendMessage(from, kontol, MessageType.audio, {quoted: freply, mimetype: 'audio/mp4', ptt:true})
                   }
-		if (budy.includes(`Desah`)) {
+		if (budy.includes(`Lagu`)) {
                 const desah = fs.readFileSync('./lib/desah.mp3');
                 hexa.sendMessage(from, desah, MessageType.audio, {quoted: freply, mimetype: 'audio/mp4', ptt:true})
                   }
-                  if (budy.includes(`desah`)) {
+                  if (budy.includes(`lagu`)) {
                 const desah = fs.readFileSync('./lib/desah.mp3');
-                hexa.sendMessage(from, desah, MessageType.audio, {quoted: freply, mimetype: 'audio/mp4', ptt:true})
+                hexa.sendMessage(from, lagu, MessageType.audio, {quoted: freply, mimetype: 'audio/mp4', ptt:true})
                   }
-      //CASE BY AGUZ
+      //CASE BY Senpai
     switch(command) {
     case `${prefix}fnasa`:
 			hexa.toggleDisappearingMessages(from,`✓`,text)
@@ -1270,7 +1270,8 @@ break
         	ytresult += '❏ Title: ' + video.title + '\n'
             ytresult += '❏ Link: ' + video.url + '\n________________________\n\n'
     		});
-    		ytresult += '◩ *👑KING AGUZ👑*'
+    		ytresult += '◩ *👑Senpai👑* ◩'
+👑*'
     		await hexa.sendMessage(from, tbuff, image, {thumbnail: fs.readFileSync('./jadi.jpeg'),quoted: freply, caption: ytresult})
 			break
           //By Noire-XV
@@ -1599,7 +1600,7 @@ HARGAI COK
 	const ushname = mek.key.fromMe ? hexa.user.name : conts.notify || conts.vname || conts.name || '-'
 	var bulanpuasa = new Date('2021','04','13').valueOf()
     tungmun = moment(bulanpuasa - Date.now()).format('DD [Hari], HH [Jam], mm [Menit], ss [Detik]')
-	menunye = `*│◪* *AguzBotWa*
+	menunye = `*│◪* *Senpai Bot*
 *│◪* *Selamat ${tampilHari}*
 *│◪* *${tampilTanggal}*
 *│◪* *Jam : ${moment.unix(int.timestamp).format('HH:mm:ss')} Wib*
@@ -1607,7 +1608,7 @@ HARGAI COK
 *│◪* *${tungmun}Hari lagi..*
 
 *◪* *TQTO*
-✓MhankBarBar
+✓Deva
 
 
 *◪* *Informasi User*
@@ -2485,8 +2486,8 @@ break
 break
 
 
-case `${prefix}goodgirlserti`: 				
-				// ⚠️ Case by SELF-AGUZ
+case `${prefix}goodgirlserti`: 			
+				// ⚠️ Case by Senpai
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
@@ -2496,23 +2497,23 @@ case `${prefix}goodgirlserti`:
 				reply(ind.wait())
 				ct = body.slice(14)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/GoodGirlSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}goodboyserti`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}goodboyserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}goodboyserti Senpai')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/GoodBoySerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}editodberkelasserti`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
@@ -2522,7 +2523,7 @@ case `${prefix}goodgirlserti`:
 				reply(ind.wait())
 				ct = body.slice(20)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/EditorBerkelasSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}goodlookingserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2531,11 +2532,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}goodlookingserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}goodlookingserti Senpai')
 				reply(ind.wait())
 				ct = body.slice(17)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/GoodLookingSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fucekboyserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2544,11 +2545,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fucekboyserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fucekboyserti Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(14)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FucekBoySerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}jametserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2561,7 +2562,7 @@ case `${prefix}goodgirlserti`:
 				reply(ind.wait())
 				ct = body.slice(11)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/JametSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}youtuberserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2570,11 +2571,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}youtuberserti AGUZ BOT')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}youtuberserti Senpai BOT')
 				reply(ind.wait())
 				ct = body.slice(14)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/YoutuberSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fftourserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2583,11 +2584,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti Senpai')
 				reply(ind.wait())
 				ct = body.slice(12)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FFSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fftourserti2`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2596,11 +2597,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti2 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti2 Deva Ganteng')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FFSerti2/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fftourserti3`:
 				 				
@@ -2610,11 +2611,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti3 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti3 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FFSerti3/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fftourserti4`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2623,11 +2624,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti4 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti4 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FFSerti4/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}fftourserti5`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2636,11 +2637,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti5 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}fftourserti5 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/FFSerti5/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}mltourserti`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2649,11 +2650,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(12)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/MLTourSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}mltourserti2`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2662,11 +2663,11 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti2 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti2 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/MLTourSerti2/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}mltourserti3`: 				
 				// ⚠️ Case by SELF-AGUZ
@@ -2675,102 +2676,102 @@ case `${prefix}goodgirlserti`:
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti3 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti3 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/MLTourSerti3/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}mltourserti4`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti4 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti4 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/MLTourSerti4/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}mltourserti5`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti5 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}mltourserti5 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(13)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/MLTourSerti5/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}pubgtourserti`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(14)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/PubgTourSerti/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}pubgtourserti2`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti2 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti2 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/PubgTourSerti2/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS })
 				break
 				case `${prefix}pubgtourserti3`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti3 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti3 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/PubgTourSerti3/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}pubgtourserti4`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti4 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti4 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/PubgTourSerti4/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}pubgtourserti5`: 				
-				// ⚠️ Case by SELF-AGUZ
+				// ⚠️ Case by Senpai GTPS
 				//if (!isPublic) return reply(mess.only.publikG)
 		////////if (!isRegistered) return reply( ind.noregis())
 
 				////////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti5 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubgtourserti5 Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(15)
 				dapuhy = await getBuffer('https://onlydevcity.xyz/PubgTourSerti5/img.php?nama=${ct}')
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 
 
@@ -4174,7 +4175,7 @@ case `${prefix}hedsot`:
 			    
                
                 ////if (isBanned) return reply('Maaf kamu sudah terbenned!')
-                if (args.length < 1) return reply('Teksnya mana ngab?\nContoh ${prefix}ttp SELF-AGUZ')
+                if (args.length < 1) return reply('Teksnya mana ngab?\nContoh ${prefix}ttp Senpai GTPS')
                 dapuhy = body.slice(5)
 				dapzz = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${dapuhy}`)
 				hexa.sendMessage(from, dapzz, sticker, {quoted: freply})
@@ -4185,7 +4186,7 @@ case `${prefix}hedsot`:
 
 
 ////if (isBanned) return reply('Maaf kamu sudah terbenned!')
-if (args.length < 1) return reply('_Teksnya Mana Boss_\n*Contoh ${prefix}logogaming Aguz*')
+if (args.length < 1) return reply('_Teksnya Mana Boss_\n*Contoh ${prefix}logogaming Senpai*')
 game = await getBuffer(`http://docs-jojo.herokuapp.com/api/gaming?text=${body.slice(12)}`)
 hexa.sendMessage(from, game, image, {quoted: freply})
 break
@@ -4197,11 +4198,11 @@ break
 
 				
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
-                    if (args.length == 0) return reply('Usage: ${prefix + command} text\nExample: ${prefix + command} AGUZ')
+                    if (args.length == 0) return reply('Usage: ${prefix + command} text\nExample: ${prefix + command} deva')
                     txt = args.join(" ")
                     reply(ind.wait())
                     buffer = await getBuffer('https://api.zeks.xyz/api/${command}?text=${txt}&apikey=${ZeksApi}')
-                    hexa.sendMessage(from, buffer, image, {caption: 'Nih kak.. *Jangan lupa follow ig @aguz*', quoted: freply})
+                    hexa.sendMessage(from, buffer, image, {caption: 'Nih kak.. *Jangan lupa follow ig @gededevadhrma*', quoted: freply})
                     break
          
                case `${prefix}qrencode`:
@@ -4212,11 +4213,11 @@ break
 				
 				
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
-                    if (args.length == 0) return reply('Usage: ${prefix + command} text\nExample: ${prefix + command} AGUZ')
+                    if (args.length == 0) return reply('Usage: ${prefix + command} text\nExample: ${prefix + command} deva')
                     txt = args.join(" ")
                     reply(ind.wait())
                     buffer = await getBuffer('https://api.zeks.xyz/api/${command}?apikey=${ZeksApi}&text=${txt}')
-                    hexa.sendMessage(from, buffer, image, {caption: 'Nih kak.. *Jangan lupa follow ig @aguzz*', quoted: freply})
+                    hexa.sendMessage(from, buffer, image, {caption: 'Nih kak.. *Jangan lupa follow ig @gededevadhrma*', quoted: freply})
                 break
                 case `${prefix}googlesearch`:
 			    //if (!isPublic) return reply(mess.only.publikG)
@@ -4225,7 +4226,7 @@ break
 	        	
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 		       
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}googlesearch Aguz|Benny|Banget')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}googlesearch Deva|Benny|Banget')
 				reply(ind.wait())
 				ct = body.slice(14)
 				dap1 = ct.split("/")[0];
@@ -4233,7 +4234,7 @@ break
 				dap3 = ct.split("/")[2];
 				anu = await fetchJson(`https://dapuhy-apikey.herokuapp.com/api/textmaker?text=${dap1}&text2=${dap2}&text3=${dap3}&theme=google-suggestion&apikey=dappabotwa`)
 				buffer = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, buffer, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, buffer, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}pubglogo`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4242,14 +4243,14 @@ break
 				 //if (!isPublic) return reply(mess.only.publikG)
 		////if (!isRegistered) return reply( ind.noregis())
 
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubglogo Aguz|Benny')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}pubglogo Senpai GTPS|Benny')
 				reply(ind.wait())
 				ct = body.slice(9)
 				dap1 = ct.split("/")[0];
                 dap2 = ct.split("/")[1];
 				anu = await fetchJson('https://dapuhy-apikey.herokuapp.com/api/textmaker/game?text=${dap1}&text2=${dap2}&theme=pubg&apikey=dappabotwa')
 				buffer = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, buffer, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, buffer, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}glitchtext`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4258,14 +4259,14 @@ break
 
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}glitchtext Aguz|Benny')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}glitchtext Senpai GTPS|Benny')
 				reply(ind.wait())
 				ct = body.slice(11)
 				dap1 = ct.split("/")[0];
                 dap2 = ct.split("/")[1];
 				anu = await fetchJson('https://dapuhy-apikey.herokuapp.com/api/textmaker?text=${dap1}&text2=${dap2}&theme=glitch&apikey=dappabotwa')
 				dapuhy = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}cup`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4274,12 +4275,12 @@ break
 
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}cup SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}cup Senpai GTPS')
 				reply(ind.wait())
 				ct = body.slice(4)
 				anu = await fetchJson('https://dapuhy-apikey.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup&apikey=dappabotwa')
 				dapuhy = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}cup2`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4288,12 +4289,12 @@ break
 
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}cup2 SELF-AGUZ')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}cup2 ')
 				reply(ind.wait())
 				ct = body.slice(5)
 				anu = await fetchJson('https://dapuhy-apikey.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup2&apikey=dappabotwa')
 				dapuhy = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}battlefield`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4302,14 +4303,14 @@ break
 
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}battlefield Aguz|Benny')
+				if (args.length < 1) return reply('Textnya Mana Cuy?\n*Contoh ${prefix}battlefield Senpai GTPS|Benny')
 				reply(ind.wait())
 				ct = body.slice(12)
 				dap1 = ct.split("/")[0];
                 dap2 = ct.split("/")[1];
 				anu = await fetchJson('https://dapuhy-apikey.herokuapp.com/api/textmaker/game?text=${dap1}&text2=${dap2}&theme=battlefield&apikey=dappabotwa')
 				dapuhy = await getBuffer(anu.result.url)
-				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe SELF-AGUZ' })
+				hexa.sendMessage(from, dapuhy, image, { quoted: freply, caption: 'Nih Jangan Lupa Subscribe Senpai GTPS' })
 				break
 				case `${prefix}hartatahta`:
 				// ⚠️ Case by SELF-AGUZ
@@ -4318,7 +4319,7 @@ break
 
 				////if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				
-				if (args.length < 1) return reply('Teksnya Mana Cuy?\nContoh : ${prefix}hartatahta SELF-AGUZ')
+				if (args.length < 1) return reply('Teksnya Mana Cuy?\nContoh : ${prefix}hartatahta Senpai GTPS')
 				dapuhy = body.slice(11)
 				reply(ind.wait())
 				asu = await getBuffer('https://api.zeks.xyz/api/hartatahta?text=${dapuhy}&apikey=${ZeksApi}')
