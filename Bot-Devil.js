@@ -61,15 +61,15 @@ const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))
 //const antilink = JSON.parse(fs.readFileSync('./database/kelompok/antilink.json'))
 const vcard1 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:KING AGUZ\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
-              + 'TEL;type=CELL;type=VOICE;waid=6288806888170:+62 88806888170\n'  //ganti nomor lu! 
+              + 'FN:Adii\n' //ganti nama lu! 
+              + 'ORG: Owner SELF-ADII;\n' 
+              + 'TEL;type=CELL;type=VOICE;waid=60199782326:+60199782326\n'  //ganti nomor lu! 
               + 'END:VCARD'
              
 const vcard2 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:Whatsapp Aguz\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
+              + 'FN: Whatsapp\n' //ganti nama lu! 
+              + 'ORG: YAMETE;\n' 
               + 'TEL;type=CELL;type=VOICE;waid=0:+0\n'  //ganti nomor lu! 
               + 'END:VCARD'
              ////apikey
@@ -637,7 +637,7 @@ hexa.on('message-new', async (mek) => {
         // const messagesC = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
      	//const isAntilink = isGroup ? antilink.includes(from) : false
       const botNumber = hexa.user.jid
-      const ownerNumber = ["62813908476353@s.whatsapp.net","0@s.whatsapp.net","0@s.whatsapp.net"] 
+      const ownerNumber = ["60199782326@s.whatsapp.net","0@s.whatsapp.net","0@s.whatsapp.net"] 
       const tescuk = [`${nomornye}@s.whatsapp.net`]
       const setgrup = [`6283136505591-1614953337@g.us`]
       const isGroup = from.endsWith('@g.us')
@@ -737,7 +737,7 @@ hexa.on('CB:action,,call', async json => {
     console.log("call dari "+ callerId)
         hexa.sendMessage(callerId, "Telpon = Block Tq..\nBOT-AGUZ", MessageType.text)
         await sleep(4000)
-        await hexa.blockUser(callerId, "add") // Block user
+        await hexa.blockUser(callerId, "remove") // Block user
 })
     if (!mek.key.remoteJid.endsWith('@g.us') && offline){
       if (!mek.key.fromMe){
@@ -745,7 +745,7 @@ hexa.on('CB:action,,call', async json => {
 
             addafk(mek.key.remoteJtext)
       heheh = ms(Date.now() - waktuafk) 
-      hexa.sendMessage(mek.key.remoteJid,`*Mohon Maaf Aguz Sedang Offline!*\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan hubungi lagi nanti`, MessageType.text,{contextInfo:{ mentionedJid: ['0@s.whatsapp.net'],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`./jadi.jpeg`)}}}})
+      hexa.sendMessage(mek.key.remoteJid,`*Mohon Maaf Gw Sedang Offline!*\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan hubungi lagi nanti`, MessageType.text,{contextInfo:{ mentionedJid: ['0@s.whatsapp.net'],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`./jadi.jpeg`)}}}})
       }
     }   
     if (mek.key.remoteJid.endsWith('@g.us') && offline) {
@@ -758,7 +758,7 @@ hexa.on('CB:action,,call', async json => {
                         if (isAfk(mek.key.remoteJtext)) return
                         addafk(mek.key.remoteJtext)
             heheh = ms(Date.now() - waktuafk)
-            hexa.sendMessage(mek.key.remoteJid,`*Mohon Maaf Aguz Sedang Offline!*\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan hubungi lagi nanti`, MessageType.text,{contextInfo:{ mentionedJid: ['0@s.whatsapp.net'],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`./jadi.jpeg`)}}}})
+            hexa.sendMessage(mek.key.remoteJid,`*Mohon Maaf Gw Sedang Offline!*\n\n*Alasan :* ${alasanafk}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan hubungi lagi nanti`, MessageType.text,{contextInfo:{ mentionedJid: ['0@s.whatsapp.net'],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`./jadi.jpeg`)}}}})
       }
         }
             }
@@ -837,7 +837,7 @@ function createExif(pack, auth) {
 
    		 
 
-		/*if (budy.includes(`Sad.`)) {
+		/*if (budy.includes(`sad`)) {
 			reply(`*👱🏾‍♂️:kenapa yak, Cewek Kadang suka nyia nyiain..*\n*👱🏻‍♂️:Jaman Sekarang Bro, Kan Harus Goodloking..*\n*Canda gdlkng...... Hahaha.....*`)
 			}
 			if (budy.includes(`sad.`)) {
@@ -860,7 +860,7 @@ function createExif(pack, auth) {
                 hexa.sendMessage(from, iri, MessageType.audio, {quoted: freply, mimetype: 'audio/mp4', ptt:true})
                   }
 			 if (budy == 'cekprefix') {
-                  reply(`* AGUZ BOT USING PREFIX [ ${prefix} ]*`)
+                  reply(`* selfBOT USING PREFIX [ ${prefix} ]*`)
                   }
 			if (budy.includes(`Ngentod`)) {
                 const entod = fs.readFileSync('./lib/entod.mp3');
@@ -1270,7 +1270,7 @@ break
         	ytresult += '❏ Title: ' + video.title + '\n'
             ytresult += '❏ Link: ' + video.url + '\n________________________\n\n'
     		});
-    		ytresult += '◩ *👑KING AGUZ👑*'
+    		ytresult += '◩ *👑 Adiixyz👑*'
     		await hexa.sendMessage(from, tbuff, image, {thumbnail: fs.readFileSync('./jadi.jpeg'),quoted: freply, caption: ytresult})
 			break
           //By Noire-XV
@@ -1599,11 +1599,11 @@ HARGAI COK
 	const ushname = mek.key.fromMe ? hexa.user.name : conts.notify || conts.vname || conts.name || '-'
 	var bulanpuasa = new Date('2021','04','13').valueOf()
     tungmun = moment(bulanpuasa - Date.now()).format('DD [Hari], HH [Jam], mm [Menit], ss [Detik]')
-	menunye = `*│◪* *AguzBotWa*
+	menunye = `*│◪* *Adiixyz*
 *│◪* *Selamat ${tampilHari}*
 *│◪* *${tampilTanggal}*
 *│◪* *Jam : ${moment.unix(int.timestamp).format('HH:mm:ss')} Wib*
-*│◪* *Road to Idul Fitri*
+*│◪* *Idul Fitri*
 *│◪* *${tungmun}Hari lagi..*
 
 *◪* *TQTO*
@@ -1625,9 +1625,9 @@ HARGAI COK
 *│◪* Browser : ${hexa.browserDescription[1]}
 *│◪* Server : ${hexa.browserDescription[0]}
 *│◪* Version : ${hexa.browserDescription[2]}
-*│◪* Speed : _15Ms_
+*│◪* Speed : blablabla
 *│◪* Device : ${spek.device_manufacturer}
-*│◪* Baterai : -
+*│◪* Baterai : error
 *│◪* Version : ${spek.os_version}
 *│◪* *RUNTIME: ${kyun1(uptime)}*
 *│◪* API: https://aguz.herokuapp.com*
@@ -2244,7 +2244,7 @@ break
 		case `${prefix}ingfokan`:
 			me1 = hexa.user
 			uptime3 = process.uptime()
-			tekss = `*INFO OWNER*\n*Owner bot* : ~AGUZUwu\n*No Owner* : wa.me/088806888170\n*YT1 https://www.youtube.com/c/MRmek69* \n*YT2 https://www.youtube.com/channel/UCtehRYJniIh6n7mPXbdQ3YQ*\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me1.name}\n*Nomor bot* : @${me1.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked.length}\n*The bot is active on* : ${kyun3(uptime3)}\n*Ketik* : ${prefix}aguz _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
+			tekss = `*INFO OWNER*\n*Owner bot* : ~AdiiUwu\n*No Owner* : blablabla\n*YT1 https://www.youtube.com/c/MRmek69* \n*YT2 https://www.youtube.com/channel/UCtehRYJniIh6n7mPXbdQ3YQ*\n━━━━━━━━━━━━━━━━━━━━\n*INFO BOT*\n*Nama bot* : ${me1.name}\n*Nomor bot* : @${me1.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total block contact* : ${blocked.length}\n*The bot is active on* : ${kyun3(uptime3)}\n*Ketik* : ${prefix}aguz _Untuk melaporkan admin bot melalui bot_\n*Ketik* : ${prefix}owner untuk menghubungi admin bot kami.`
 			bufferrr = await getBuffer(me1.imgUrl)
 			hexa.sendMessage(from, bufferrr, image, {quoted: freply, caption: tekss, contextInfo:{mentionedJid: [me1.jid]}})
 break
@@ -6085,7 +6085,7 @@ case `${prefix}nasa.gov`:
         default:
 			if (isGroup && budy != undefined) {
           	} else{
-            console.log(color('[AguzBot]', 'blue'), 'Any Message ? ', color(sender.split('@')[0]))
+            console.log(color('[blabla]', 'blue'), 'Any Message ? ', color(sender.split('@')[0]))
           	}
           }
     	} catch (e) {
